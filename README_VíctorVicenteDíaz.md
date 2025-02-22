@@ -19,4 +19,4 @@
 - `git log --graph`
 
 ## DIFICULTADES:
-La parte de hacer el pull request y el 
+La parte de hacer el pull request y el merge desde comandos se nos atravesó un poco pero el resto todo bien.
