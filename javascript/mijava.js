@@ -1,8 +1,13 @@
-// Hola, este es el inicio del js.
-var miVariable = "Hola Mundo";
-console.log(miVariable);
+document.addEventListener("DOMContentLoaded", function () {
+    const botonModoOscuro = document.getElementById("modoOscuroBtn");
 
-miVariable2 = 2+2
-// 4
-console.log(miVariable2);
-// 4
+    botonModoOscuro.addEventListener("click", function () {
+        document.body.classList.toggle("modo-oscuro");
+
+        if (document.body.classList.contains("modo-oscuro")) {
+            botonModoOscuro.value = "Modo claro";
+        } else {
+            botonModoOscuro.value = "Modo oscuro";
+        }
+    });
+});
