@@ -245,6 +245,24 @@ video {
     width: 100%;
 }
 
+.modo-oscuro {
+    background-color: #121212;
+    color: white;
+}
+
+.modo-oscuro header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+.modo-oscuro aside {
+    background-color: #1e1e1e;
+}
+
+.modo-oscuro main {
+    background-color: #181818;
+}
+
 @media (max-width: 800px) {
     html {
         font-size: 14px;
@@ -254,3 +272,5 @@ video {
         display: none;
     }
 }
+
+
