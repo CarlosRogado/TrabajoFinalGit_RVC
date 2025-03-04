@@ -1,12 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     const botonModoOscuro = document.getElementById("modoOscuroBtn");
+    const body = document.body;
+
+    // Verificar si hay un modo guardado en localStorage
+    if (localStorage.getItem("modoOscuro") === "activado") {
+        body.classList.add("modo-oscuro");
+        botonModoOscuro.value = "Modo claro";
+    }
 
     botonModoOscuro.addEventListener("click", function () {
-        document.body.classList.toggle("modo-oscuro");
+        body.classList.toggle("modo-oscuro");
 
-        if (document.body.classList.contains("modo-oscuro")) {
+        if (body.classList.contains("modo-oscuro")) {
+            localStorage.setItem("modoOscuro", "activado");
             botonModoOscuro.value = "Modo claro";
         } else {
+            localStorage.setItem("modoOscuro", "desactivado");
             botonModoOscuro.value = "Modo oscuro";
         }
     });
